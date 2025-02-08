@@ -38,7 +38,7 @@ if st.button('Send'):
                 with pdfplumber.open(BytesIO(img.read())) as pdf:
                     for page in pdf.pages:
                         text = page.extract_text()
-                        print(len(text))
+                        # print(len(text))
                         if text:
                             msg['content'].append(
                                 {
